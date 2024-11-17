@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Solar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Texto piscando no topo -->
+    <div class="blinking-text">Clique nos planetas!</div>
+
+    <!-- Container que centraliza o conteúdo -->
+    <div class="container">
+        <!-- Sol -->
+        <div id="sun" class="sun">
+            <div class="planet-name">Sol</div>
+        </div>
+
+        <!-- Planetas -->
+        <div id="mercury" class="planet orbit1">
+            <div class="planet-name">Mercúrio</div>
+        </div>
+        <div id="venus" class="planet orbit2">
+            <div class="planet-name">Vênus</div>
+        </div>
+        <div id="earth" class="planet orbit3">
+            <div class="planet-name">Terra</div>
+        </div>
+        <div id="mars" class="planet orbit4">
+            <div class="planet-name">Marte</div>
+        </div>
+        <div id="jupiter" class="planet orbit5">
+            <div class="planet-name">Júpiter</div>
+        </div>
+        <div id="saturn" class="planet orbit6">
+            <div class="planet-name">Saturno</div>
+        </div>
+        <div id="uranus" class="planet orbit7">
+            <div class="planet-name">Urano</div>
+        </div>
+        <div id="neptune" class="planet orbit8">
+            <div class="planet-name">Netuno</div>
+        </div>
+        <div id="pluto" class="planet orbit9">
+            <div class="planet-name">Plutão</div>
+        </div>
+        
+    <!-- Outros planetas -->
+</div>
+    </div>
+
+    <!-- Aba deslizante para descrição -->
+    <div id="info-panel" class="info-panel">
+        <button id="close-btn" class="close-btn">×</button>
+        <h2 id="planet-name"></h2>
+        <p id="planet-description"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
