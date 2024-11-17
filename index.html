@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador do Sistema Solar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sol -->
+        <div class="sun" id="sun"></div>
+
+        <!-- Planetas -->
+        <div class="planet orbit1" id="mercury"></div>
+        <div class="planet orbit2" id="venus"></div>
+        <div class="planet orbit3" id="earth"></div>
+        <div class="planet orbit4" id="mars"></div>
+        <div class="planet orbit5" id="jupiter"></div>
+        <div class="planet orbit6" id="saturn"></div>
+        <div class="planet orbit7" id="uranus"></div>
+        <div class="planet orbit8" id="neptune"></div>
+        <div class="planet orbit9" id="pluto"></div>
+    </div>
+
+    <!-- Div para exibir as informações sobre os planetas e o Sol -->
+    <div id="planet-info" class="planet-info" style="display: none;">
+        <p id="planet-name"></p>
+        <p id="planet-description"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
