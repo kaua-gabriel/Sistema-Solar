@@ -1,0 +1,264 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(#1A1A1C, #2C3E50);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Texto piscando no topo */
+.blinking-text {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    font-weight: bold;
+    color: #FFFFFF;
+    animation: blink 1s infinite;
+    z-index: 1000;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Container central */
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Sol */
+.sun {
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background-color: #D4FF06;
+    box-shadow: 0 0 20px 10px rgba(255, 255, 0, 0.8);
+    z-index: 1;
+}
+
+/* Planetas */
+.planet {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.8;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.orbit1 { /* Mercúrio */
+    width: 10px;
+    height: 10px;
+    background: linear-gradient(135deg, #808080, #A9A9A9);
+    animation: orbit1 8s infinite linear;
+}
+
+.orbit2 { /* Vênus */
+    width: 25px;
+    height: 25px;
+    background: linear-gradient(135deg, #C8B800, #FFD700);
+    animation: orbit2 12s infinite linear;
+}
+
+.orbit3 { /* Terra */
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(135deg, #1E90FF, #4682B4);
+    animation: orbit3 16s infinite linear;
+}
+
+.orbit4 { /* Marte */
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(135deg, #FF6347, #FF4500);
+    animation: orbit4 20s infinite linear;
+}
+
+.orbit5 { /* Júpiter */
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #F0E68C, #DAA520);
+    animation: orbit5 25s infinite linear;
+}
+
+.orbit6 { /* Saturno */
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #FFCC00, #FFB84D);
+    animation: orbit6 30s infinite linear;
+}
+
+.orbit7 { /* Urano */
+    width: 35px;
+    height: 35px;
+    background: linear-gradient(135deg, #00CED1, #20B2AA);
+    animation: orbit7 35s infinite linear;
+}
+
+.orbit8 { /* Netuno */
+    width: 35px;
+    height: 35px;
+    background: linear-gradient(135deg, #4682B4, #5F9EA0);
+    animation: orbit8 40s infinite linear;
+}
+
+.orbit9 { /* Plutão */
+    width: 10px;
+    height: 10px;
+    background: linear-gradient(135deg, #D3D3D3, #A9A9A9);
+    animation: orbit9 45s infinite linear;
+}
+
+/* Animações das órbitas */
+@keyframes orbit1 {
+    0% { transform: rotate(0deg) translateX(40px) rotate(0deg); }
+    100% { transform: rotate(360deg) translateX(40px) rotate(-360deg); }
+}
+
+@keyframes orbit2 {
+    0% { transform: rotate(0deg) translateX(80px) rotate(0deg); }
+    100% { transform: rotate(360deg) translateX(80px) rotate(-360deg); }
+}
+
+@keyframes orbit3 {
+    0% { transform: rotate(0deg) translateX(120px) rotate(0deg); }
+    100% { transform: rotate(360deg) translateX(120px) rotate(-360deg); }
+}
+
+@keyframes orbit4 {
+    0% { transform: rotate(0deg) translateX(160px) rotate(0deg); }
+    100% { transform: rotate(360deg) translateX(160px) rotate(-360deg); }
+}
+
+@keyframes orbit5 {
+    0% { transform: rotate(0deg) translateX(200px) rotate(0deg); }
+    100% { transform: rotate(360deg) translateX(200px) rotate(-360deg); }
+}
+
+@keyframes orbit6 {
+    0% { transform: rotate(0deg) translateX(250px) rotate(0deg); }
+    100% { transform: rotate(360deg) translateX(250px) rotate(-360deg); }
+}
+
+@keyframes orbit7 {
+    0% { transform: rotate(0deg) translateX(300px) rotate(0deg); }
+    100% { transform: rotate(360deg) translateX(300px) rotate(-360deg); }
+}
+
+@keyframes orbit8 {
+    0% { transform: rotate(0deg) translateX(350px) rotate(0deg); }
+    100% { transform: rotate(360deg) translateX(350px) rotate(-360deg); }
+}
+
+@keyframes orbit9 {
+    0% { transform: rotate(0deg) translateX(400px) rotate(0deg); }
+    100% { transform: rotate(360deg) translateX(400px) rotate(-360deg); }
+}
+
+/* Nome dos planetas */
+.planet-name {
+    position: absolute;
+    top: -25px;
+    left: -15px;
+    font-size: 14px;
+    color: white;
+    font-weight: bold;
+}
+
+/* Aba deslizante */
+.info-panel {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.4s ease;
+    transform: translateY(100%);
+    padding: 20px;
+    z-index: 2000;
+    overflow-y: auto;
+}
+
+.info-panel.active {
+    transform: translateY(0);
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #FFA500;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .sun {
+        width: 100px;
+        height: 100px;
+    }
+
+    .orbit1 { width: 15px; height: 15px; }
+    .orbit2 { width: 20px; height: 20px; }
+    .orbit3 { width: 25px; height: 25px; }
+    .orbit4 { width: 18px; height: 18px; }
+    .orbit5 { width: 40px; height: 40px; }
+    .orbit6 { width: 35px; height: 35px; }
+    .orbit7 { width: 25px; height: 25px; }
+    .orbit8 { width: 25px; height: 25px; }
+    .orbit9 { width: 12px; height: 12px; }
+}
+
+@media (max-width: 480px) {
+    .sun {
+        width: 80px;
+        height: 80px;
+    }
+
+    .orbit1 { width: 12px; height: 12px; }
+    .orbit2 { width: 18px; height: 18px; }
+    .orbit3 { width: 22px; height: 22px; }
+    .orbit4 { width: 15px; height: 15px; }
+    .orbit5 { width: 35px; height: 35px; }
+    .orbit6 { width: 30px; height: 30px; }
+    .orbit7 { width: 20px; height: 20px; }
+    .orbit8 { width: 20px; height: 20px; }
+    .orbit9 { width: 18px; height: 20px; }
+}
+#planet-temperature, #planet-size, #planet-composition, #planet-funFact {
+    margin-top: 10px;
+    font-style: italic;
+    color: #DDDDDD;
+}
