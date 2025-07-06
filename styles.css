@@ -11,8 +11,8 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  pointer-events: none; /* para não atrapalhar clique */
-  z-index: 0; /* atrás de tudo */
+  pointer-events: none; 
+  z-index: 0; 
   background: transparent;
   display: block;
 }
